@@ -1,0 +1,17 @@
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 150px;
+    align-items: center;
+}
+
+.tarjeta img {
+    padding: 10px;
+}

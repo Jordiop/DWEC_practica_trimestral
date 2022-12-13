@@ -7,21 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorge Osarenkhoe Petro</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div>
-        <h1>Buscar avatar</h1>
+        <h1>Get One</h1>
         <form>
-            <input type="text" placeholder="Nombre del avatar">
+            <input type="text" placeholder="Nombre del avatar" id="busqueda" onclick="buscarHeroe()">
             <button>Buscar</button>
         </form>
+        <div id="resultadoBusqueda"></div>
     </div>
     <div>
-        <h1>Pruebas</h1>
-        <button onclick="prueba()">Prueba
+        <h1>Get All</h1>
+        <button onclick="verHeroes()">Prueba
         </button> </div>
-    <div id="resultado">
+    <div id="container">
 
     </div>
     <div>
