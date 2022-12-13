@@ -1,0 +1,57 @@
+{
+    "heroe": [{
+            "id": 1,
+            "nombre": "Iron Man",
+            "imagen": "0",
+            "avenger": "In"
+        },
+        {
+            "id": 1,
+            "nombre": "Captain America",
+            "imagen": "1",
+            "avenger": "Out"
+        }, {
+            "id": 2,
+            "nombre": "Hawkeye",
+            "imagen": "2",
+            "avenger": "Out"
+        },
+        {
+            "id": 3,
+            "nombre": "Deadpool",
+            "imagen": "3",
+            "avenger": "Out"
+        }, {
+            "id": 4,
+            "nombre": "Ant-man",
+            "imagen": "4",
+            "avenger": "Out"
+        }, {
+            "id": 5,
+            "nombre": "Black Widow",
+            "imagen": "5",
+            "avenger": "Out"
+        }, {
+            "id": 6,
+            "nombre": "Iron Patriot",
+            "imagen": "6",
+            "avenger": "Out"
+        }, {
+            "id": 7,
+            "nombre": "New Captain America",
+            "imagen": "7",
+            "avenger": "Out"
+        }, {
+            "id": 8,
+            "nombre": "Thor",
+            "imagen": "8",
+            "avenger": "Out"
+        }, {
+            "id": 9,
+            "nombre": "Vision",
+            "imagen": "9",
+            "avenger": "Out"
+        }
+
+    ]
+}
