@@ -119,3 +119,16 @@ async function modificarVida() {
 }
 
 // Method delete async-await version
+async function borrarHeroe() {
+    try {
+        let id = document.getElementById('borrarBusqueda').value;
+        let response = await fetch(url);
+        if (response === 200) {
+            await fetch(url + '/' + id, {
+                method: 'DELETE'
+            });
+        }
+    } catch (err) {
+        console.log(err);
+    }
+}
