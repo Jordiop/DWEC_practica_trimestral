@@ -12,7 +12,8 @@
             "imagen": "1",
             "vida": 0,
             "avenger": "Out"
-        }, {
+        },
+        {
             "id": 2,
             "nombre": "Hawkeye",
             "imagen": "2",
@@ -25,43 +26,48 @@
             "imagen": "3",
             "vida": 0,
             "avenger": "Out"
-        }, {
+        },
+        {
             "id": 4,
             "nombre": "Ant-man",
             "imagen": "4",
             "vida": 0,
             "avenger": "Out"
-        }, {
+        },
+        {
             "id": 5,
             "nombre": "Black Widow",
             "imagen": "5",
             "vida": 0,
             "avenger": "Out"
-        }, {
+        },
+        {
             "id": 6,
             "nombre": "I. Patriot",
             "imagen": "6",
             "vida": 0,
             "avenger": "Out"
-        }, {
+        },
+        {
             "id": 7,
             "nombre": "NC America",
             "imagen": "7",
             "vida": 0,
             "avenger": "Out"
-        }, {
+        },
+        {
             "id": 8,
             "nombre": "Thor",
             "imagen": "8",
             "vida": 0,
             "avenger": "Out"
-        }, {
+        },
+        {
             "id": 9,
             "nombre": "Vision",
             "imagen": "9",
             "vida": 0,
             "avenger": "Out"
         }
-
     ]
 }
