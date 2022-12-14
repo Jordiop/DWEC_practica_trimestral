@@ -1,15 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap%22%22");
+* {
+    font-family: poppins;
+}
+
 #container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .tarjeta {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     border: 1px solid black;
     border-radius: 10px;
     max-width: 150px;
     align-items: center;
+    margin: 10px;
 }
 
 .tarjeta img {

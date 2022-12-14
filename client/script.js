@@ -1,5 +1,6 @@
 const url = 'http://localhost:3000/heroe';
 
+
 // Get all async-await version
 async function verHeroes() {
     try {
@@ -7,6 +8,7 @@ async function verHeroes() {
         if (response.status === 200) {
             let avenger = await response.json();
             const container = document.getElementById('container');
+            container.innerHTML = '';
             for (let i = 0; i < avenger.length; i++) {
                 let tarjetas = document.createElement('div');
                 tarjetas.classList.add('tarjeta');
@@ -104,14 +106,14 @@ async function modificarVida() {
             // Comprobamos que los campos no esten vacios
             if (id != '' && vida != '') {
                 data.vida = vida;
+                await fetch(url + '/' + id, {
+                    method: 'PUT',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
             }
-            await fetch(url + '/' + id, {
-                method: 'PUT',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
         }
     } catch (err) {
         console.log(err);
@@ -122,12 +124,10 @@ async function modificarVida() {
 async function borrarHeroe() {
     try {
         let id = document.getElementById('borrarBusqueda').value;
-        let response = await fetch(url);
-        if (response === 200) {
+        const data =
             await fetch(url + '/' + id, {
                 method: 'DELETE'
             });
-        }
     } catch (err) {
         console.log(err);
     }
