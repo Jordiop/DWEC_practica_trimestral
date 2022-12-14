@@ -8,25 +8,31 @@
     <title>Jorge Osarenkhoe Petro</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script>
+        onload = () => {
+            verHeroes();
+        }
+    </script>
 </head>
 
 <body>
     <header>
-        <h1>Avengers</h1>
-        <script>
-            onload = () => {
-                verHeroes();
-            }
-        </script>
+
     </header>
-    <div id="container"> </div>
-    <div>
-        <h1>Get One</h1>
-        <input type="text" placeholder="ID del avatar" id="busqueda">
-        <button onclick="buscarHeroe()">Buscar</button>
+    <h1>Avengers</h1>
+    <div id="container">
+
+    </div>
+    <div id="divBuscar">
+        <h1>Buscador</h1>
+        <div>
+            <input type="text" placeholder="ID del avatar" id="busqueda">
+            <button onclick="buscarHeroe()">Buscar</button>
+            <button onclick="borrar()">Borrar</button>
+        </div>
         <div id="resultadoBusqueda"></div>
     </div>
-    <div>
+    <div id="divAgregar">
         <h1>Crear avatar</h1>
         <label for="nombreAgregar">Nombre</label>
         <input type="text" placeholder="Nombre del avatar" id="nombreAgregar"><br>

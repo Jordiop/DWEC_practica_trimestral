@@ -37,7 +37,7 @@
     },
     {
       "id": 5,
-      "nombre": "Black Widow",
+      "nombre": "B. Widow",
       "imagen": "5",
       "vida": 0,
       "avenger": "Out"
@@ -51,7 +51,7 @@
     },
     {
       "id": 7,
-      "nombre": "NC America",
+      "nombre": "Falcon",
       "imagen": "7",
       "vida": 0,
       "avenger": "Out"
@@ -69,6 +69,20 @@
       "imagen": "9",
       "vida": 0,
       "avenger": "Out"
+    },
+    {
+      "nombre": "jordi",
+      "imagen": "5",
+      "vidas": "8",
+      "status": "In",
+      "id": 10
+    },
+    {
+      "nombre": "abril",
+      "imagen": "4",
+      "vidas": "8",
+      "status": "In",
+      "id": 11
     }
   ]
 }

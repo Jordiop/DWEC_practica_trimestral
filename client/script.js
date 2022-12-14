@@ -15,7 +15,7 @@ async function verHeroes() {
                 tarjetas.innerHTML =
                     '<img src="../images/heroe' + i + '.jpeg' + '" alt="imagen" width="100">' +
                     '<div>' + 'ID: ' + avenger[i].id + '</div>' +
-                    '<div>' + 'Nombre: ' + avenger[i].nombre + '</div>' +
+                    '<div>' + 'Name: ' + avenger[i].nombre + '</div>' +
                     '<div>' + 'Status: ' + avenger[i].avenger + '</div>' +
                     '<div>' + 'Vida: ' + avenger[i].vida + '</div>';
                 container.appendChild(tarjetas);
@@ -43,7 +43,7 @@ async function buscarHeroe() {
                     tarjetas.innerHTML =
                         '<img src="../images/heroe' + i + '.jpeg' + '" alt="imagen" width="100">' +
                         '<div>' + 'ID: ' + avenger[i].id + '</div>' +
-                        '<div>' + 'Nombre: ' + avenger[i].nombre + '</div>' +
+                        '<div>' + 'Name: ' + avenger[i].nombre + '</div>' +
                         '<div>' + 'Status: ' + avenger[i].avenger + '</div>' +
                         '<div>' + 'Vida: ' + avenger[i].vida + '</div>';
                     container.appendChild(tarjetas);
@@ -94,8 +94,7 @@ async function agregarHeroe() {
 }
 
 // Put async-await version
-// First version
-// Idea: put 2 buttons to add and remove life
+// Anida dos metodes, primer fa un get per obtenir el personatge i després un put per modificar-lo a la db
 async function modificarVida() {
     let id = document.getElementById('vidaBusqueda').value;
     try {
@@ -131,4 +130,9 @@ async function borrarHeroe() {
     } catch (err) {
         console.log(err);
     }
+}
+
+function borrar() {
+    let container = document.getElementById('resultadoBusqueda');
+    container.innerHTML = '';
 }
