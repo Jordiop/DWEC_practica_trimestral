@@ -90,3 +90,32 @@ async function agregarHeroe() {
         console.log(err);
     }
 }
+
+// Put async-await version
+// First version
+// Idea: put 2 buttons to add and remove life
+async function modificarVida() {
+    let id = document.getElementById('vidaBusqueda').value;
+    try {
+        let response = await fetch(url + '/' + id);
+        if (response.status === 200) {
+            let vida = document.getElementById('vidaModificar').value;
+            let data = await response.json();
+            // Comprobamos que los campos no esten vacios
+            if (id != '' && vida != '') {
+                data.vida = vida;
+            }
+            await fetch(url + '/' + id, {
+                method: 'PUT',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+        }
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// Method delete async-await version

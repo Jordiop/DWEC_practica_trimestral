@@ -15,17 +15,13 @@
         <h1>Get One</h1>
         <input type="text" placeholder="ID del avatar" id="busqueda">
         <button onclick="buscarHeroe()">Buscar</button>
-        <div id="resultadoBusqueda">
-
-        </div>
+        <div id="resultadoBusqueda"></div>
     </div>
     <div>
         <h1>Get All</h1>
         <button onclick="verHeroes()">Prueba
         </button> </div>
-    <div id="container">
-
-    </div>
+    <div id="container"></div>
     <div>
         <h1>Crear avatar</h1>
         <label for="nombreAgregar">Nombre</label>
@@ -37,6 +33,12 @@
         <label for="ataqueAgregar">Status</label>
         <input type="text" required placeholder="Status" id="statusAgregar"><br>
         <button onclick="agregarHeroe()">Crear</button>
+    </div>
+    <div>
+        <h1>Cambiar vida</h1>
+        <input type="text" placeholder="ID del avatar" id="vidaBusqueda">
+        <input type="number" required placeholder="Vida" min="0" max="100" id="vidaModificar"><br>
+        <button onclick="modificarVida()">Modificar</button>
     </div>
 </body>
 
