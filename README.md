@@ -16,9 +16,9 @@ A partir d'allà, seguint els apunts que teniem a mà, s'ha desenvolupat el Java
 
 ## Funcionament de la pràctica
 
-El mètode **GET** és el que s'encarrega de mostrar les dades de la API. Per això, s'ha fet un  **fetch**  a la URL de la API, que és  **http://localhost:3000/heroe**. Aquesta URL és la que retorna tots els clients de la API. Aquesta URL es troba a la variable  **url**  del fitxer  **script.js**.
+El mètode **GET** és el que s'encarrega de mostrar totes les dades de la API. Per això, s'ha fet un  **fetch**  a la URL de la API, que és  **http://localhost:3000/heroe**. Aquesta URL és la que retorna tots els clients de la API. Aquesta URL es troba a la variable  **url**  del fitxer  **script.js**.
 
-El mètode **GET ONE** és el que s'encarrega de mostrar les dades d'un client concret de la API. Per això, s'ha fet un  **fetch**  a la URL de la API, que és  **http://localhost:3000/heroe/1**. Aquesta URL és la que retorna el client amb id 1 de la API. Aquesta URL es troba a la variable  **url**  del fitxer  **script.js**.
+El mètode **GET ONE** és el que s'encarrega de mostrar les dades d'un heroi concret de la API. Per això, s'ha fet un  **fetch**  a la URL de la API, que és  **http://localhost:3000/heroe/1**. Aquesta URL és la que retorna el client amb id 1 de la API. Aquesta URL es troba a la variable  **url**  del fitxer  **script.js**.
 
 El mètode **POST** és el que s'encarrega d'afegir un nou client a la API. Per això, s'ha fet un  **fetch**  a la URL de la API, que és  **http://localhost:3000/heroe**. Aquesta URL és la que retorna tots els clients de la API. Aquesta URL es troba a la variable  **url**  del fitxer  **script.js**. A més, s'ha fet un  **POST**  amb les dades del nou client.
 
