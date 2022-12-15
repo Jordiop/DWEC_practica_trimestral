@@ -29,9 +29,9 @@ async function verHeroes() {
 // Get one async-await version
 async function buscarHeroe() {
     try {
+        let id = document.getElementById('busqueda').value;
         let response = await fetch(url + '/' + id);
         if (response.status === 200) {
-            let id = document.getElementById('busqueda').value;
             let avenger = await response.json();
             const container = document.getElementById('resultadoBusqueda');
             container.innerHTML = '';
