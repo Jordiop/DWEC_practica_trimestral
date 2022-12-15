@@ -13,7 +13,7 @@ async function verHeroes() {
                 let tarjetas = document.createElement('div');
                 tarjetas.classList.add('tarjeta');
                 tarjetas.innerHTML =
-                    '<img src="../images/heroe' + i + '.jpeg' + '" alt="imagen" width="100">' +
+                    '<img src="../server/images/heroe' + i + '.jpeg' + '" alt="imagen" width="100">' +
                     '<div>' + 'ID: ' + avenger[i].id + '</div>' +
                     '<div>' + 'Name: ' + avenger[i].nombre + '</div>' +
                     '<div>' + 'Status: ' + avenger[i].avenger + '</div>' +
@@ -29,34 +29,33 @@ async function verHeroes() {
 // Get one async-await version
 async function buscarHeroe() {
     try {
-        let response = await fetch(url);
+        let response = await fetch(url + '/' + id);
         if (response.status === 200) {
             let id = document.getElementById('busqueda').value;
             let avenger = await response.json();
             const container = document.getElementById('resultadoBusqueda');
-            // Emptying the container to have just one result
             container.innerHTML = '';
-            for (let i = 0; i < avenger.length; i++) {
-                if (id == avenger[i].id) {
-                    let tarjetas = document.createElement('div');
-                    tarjetas.classList.add('tarjeta');
-                    tarjetas.innerHTML =
-                        '<img src="../images/heroe' + i + '.jpeg' + '" alt="imagen" width="100">' +
-                        '<div>' + 'ID: ' + avenger[i].id + '</div>' +
-                        '<div>' + 'Name: ' + avenger[i].nombre + '</div>' +
-                        '<div>' + 'Status: ' + avenger[i].avenger + '</div>' +
-                        '<div>' + 'Vida: ' + avenger[i].vida + '</div>';
-                    container.appendChild(tarjetas);
-                }
-            }
+            let tarjetas = document.createElement('div');
+            tarjetas.classList.add('tarjeta');
+            tarjetas.innerHTML =
+                '<img src="../server/images/heroe' + id + '.jpeg' + '" alt="imagen" width="100">' +
+                '<div>' + 'ID: ' + avenger.id + '</div>' +
+                '<div>' + 'Name: ' + avenger.nombre + '</div>' +
+                '<div>' + 'Status: ' + avenger.avenger + '</div>' +
+                '<div>' + 'Vida: ' + avenger.vida + '</div>';
+            container.appendChild(tarjetas);
         }
+
+
     } catch (err) {
         console.log(err);
     }
-};
+}
+
 
 
 // Post async-await version
+// Anida dos fetch
 async function agregarHeroe() {
     try {
         let response = await fetch(url);
@@ -65,7 +64,7 @@ async function agregarHeroe() {
             let imagen = document.getElementById('imagenAgregar').value;
             let vida = document.getElementById('vidaAgregar').value;
             let status = document.getElementById('statusAgregar').value;
-            // Comprobamos que los campos no esten vacios
+            // Comprobams que els camps no siguin buits
             if (nombre != '' || imagen != '' || vida != '' || status != '') {
                 fetch(url, {
                         method: 'POST',
@@ -75,8 +74,8 @@ async function agregarHeroe() {
                         body: JSON.stringify({
                             nombre: nombre,
                             imagen: imagen,
-                            vidas: vida,
-                            status: status
+                            vida: vida,
+                            avenger: status
                         })
                     })
                     .then(res => res.json())
@@ -95,6 +94,7 @@ async function agregarHeroe() {
 
 // Put async-await version
 // Anida dos metodes, primer fa un get per obtenir el personatge i després un put per modificar-lo a la db
+// El primer que fa es fer un GET One per obtenir el personatge i després un PUT per modificar-lo a la db
 async function modificarVida() {
     let id = document.getElementById('vidaBusqueda').value;
     try {
@@ -119,7 +119,7 @@ async function modificarVida() {
     }
 }
 
-// Method delete async-await version
+// Mètode DELETE async-await version
 async function borrarHeroe() {
     try {
         let id = document.getElementById('borrarBusqueda').value;
@@ -132,7 +132,8 @@ async function borrarHeroe() {
     }
 }
 
-function borrar() {
+// Mètode simple per borrar el contingut del Get One manualment
+async function borrar() {
     let container = document.getElementById('resultadoBusqueda');
     container.innerHTML = '';
 }

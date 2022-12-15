@@ -1,14 +1,14 @@
 {
   "heroe": [
     {
-      "id": 1,
+      "id": 0,
       "nombre": "Iron Man",
       "imagen": "0",
       "vida": "4",
       "avenger": "In"
     },
     {
-      "id": 0,
+      "id": 1,
       "nombre": "C. America",
       "imagen": "1",
       "vida": "6",
@@ -69,20 +69,6 @@
       "imagen": "9",
       "vida": 0,
       "avenger": "Out"
-    },
-    {
-      "nombre": "jordi",
-      "imagen": "5",
-      "vidas": "8",
-      "status": "In",
-      "id": 10
-    },
-    {
-      "nombre": "abril",
-      "imagen": "4",
-      "vidas": "8",
-      "status": "In",
-      "id": 11
     }
   ]
 }
