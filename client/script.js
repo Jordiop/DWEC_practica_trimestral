@@ -66,7 +66,7 @@ async function agregarHeroe() {
             let status = document.getElementById('statusAgregar').value;
             // Comprobams que els camps no siguin buits
             if (nombre != '' || imagen != '' || vida != '' || status != '') {
-                fetch(url, {
+                await fetch(url, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
